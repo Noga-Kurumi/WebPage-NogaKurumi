@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Noga Kurumi | Portafolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #023047;
+      color: #ffffff;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 3rem;
+      background-color: #023047;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: #8ECAE6;
+    }
+
+    nav a {
+      color: #ccc;
+      margin-left: 2rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #8ECAE6;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 6rem 3rem 3rem;
+    }
+
+    .content {
+      flex: 1;
+      max-width: 600px;
+    }
+
+    .content h1 {
+      font-size: 2.8rem;
+      color: #ffffff;
+    }
+
+    .content h1 span {
+      color: #8ECAE6;
+    }
+
+    .content p {
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      color: #aaa;
+      line-height: 1.6;
+    }
+
+    .content a.button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #8ECAE6;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.2s;
+    }
+
+    .content a.button:hover {
+      background-color: #219EBC;
+    }
+
+    .photo {
+      flex: 1;
+      display: flex;
+      justify-content: right;
+    }
+
+    .photo img {
+      width: 450px;
+      border-radius: 25px;
+      object-fit: cover;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background-color: #021e33;
+      color: #aaa;
+    }
+
+    #quien-soy {
+      flex-direction: row-reverse;
+    }
+
+    #quien-soy .image-preview {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    #quien-soy .image-preview img {
+      max-width: 400px;
+      border-radius: 20px;
+      transition: opacity 0.3s ease;
+    }
+
+    #quien-soy .content h2 {
+      margin-top: 2rem;
+      color: #FFB703;
+    }
+
+    #quien-soy ul {
+      list-style: none;
+      padding-left: 1rem;
+      margin-top: 1rem;
+    }
+
+    #quien-soy li {
+      margin-bottom: 0.5rem;
+      color: #eee;
+    }
+
+    .carousel {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      padding: 1rem 0;
+      scroll-behavior: smooth;
+    }
+
+    .carousel img {
+      height: 150px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .carousel img:hover {
+      transform: scale(1.05);
+    }
+
+    #portafolio {
+      flex-direction: row;
+    }
+
+    #portafolio .image-preview {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #portafolio .image-preview img {
+      max-width: 400px;
+      border-radius: 20px;
+    }
+
+    #contacto, #formulario-correo {
+      justify-content: center;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">NK</div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#quien-soy">Quién soy</a>
+      <a href="#portafolio">Portafolio</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section id="inicio">
+    <div class="content">
+      <h1>Soy <span>Noga Kurumi</span></h1>
+      <p>Desarrollador especializado en Unreal Engine y UEFN. Con experiencia en edición de video profesional, integración de IA y automatización de flujos de trabajo. En constante evolución, combinando diseño técnico y creatividad para ofrecer soluciones funcionales y eficientes.</p>
+      <a class="button" href="#contacto">CONTACTAME</a>
+    </div>
+    <div class="photo">
+      <img src="foto.png" alt="Noga Kurumi">
+    </div>
+  </section>
+
+    <section id="quien-soy">
+    <div class="content">
+        <h1>Quién soy</h1>
+        <div class="bio">
+        <h2>Mi nombre es Julian Gustavo Nogales</h2>
+        <p>Aunque en internet se me conoce como Noga Kurumi. Soy desarrollador especializado en Unreal Engine y UEFN, con experiencia sólida en edición de video profesional, integración de inteligencia artificial y automatización de flujos de trabajo. Me enfoco en soluciones técnicas creativas y funcionales, adaptadas a proyectos modernos.</p>
+        </div>
+        <div class="servicios">
+        <h2>Servicios que ofrezco</h2>
+        <ul>
+            <li onmouseover="cambiarImagen('dev.png')">🎮 Desarrollo de videojuegos (Unreal Engine, UEFN)</li>
+            <li onmouseover="cambiarImagen('video.png')">🎬 Edición profesional de video</li>
+            <li onmouseover="cambiarImagen('fx.png')">🧰 Integración de efectos especiales en postproducción</li>
+        </ul>
+        </div>
+        <div class="trabajo">
+        <h2>Cómo trabajar conmigo</h2>
+        <p>Podés contactarme directamente a través del formulario de contacto o redes sociales. Una vez que discutamos tu idea o necesidad, propongo una solución concreta, tiempos y presupuesto. Me comprometo con la calidad y la comunicación constante durante todo el proceso.</p>
+        </div>
+    </div>
+    <div class="image-preview">
+        <img id="preview-img" src="preview-default.png" alt="Vista previa">
+    </div>
+    </section>
+
+  <section id="portafolio">
+    <div class="content">
+      <h1>Portafolio</h1>
+      <h2>Edición de video para creadores</h2>
+      <p>Colaboré como editor con creadores como JasperDev, Tomex y Ale Wang, realizando edición narrativa, motion graphics y optimización para YouTube. Podés ver la versión completa de mi trabajo en edición aquí:</p>
+      <a class="button" href="https://ytjobs.co/talent/profile/187951" target="_blank">VER PORTAFOLIO COMPLETO</a>
+
+      <h2 style="margin-top: 3rem;">Postproducción en Caprichoso</h2>
+      <p>Trabajé en efectos visuales para una variedad de proyectos audiovisuales, desde promos hasta cortos experimentales. Algunos ejemplos:</p>
+      <div class="carousel" id="carrusel">
+        <a href="https://www.youtube.com/watch?v=hjxiq0IZO4Y" target="_blank"><img src="thumb1.jpg" alt="Video 1"></a>
+        <a href="https://www.youtube.com/watch?v=knlljpAzXAA" target="_blank"><img src="thumb2.jpg" alt="Video 2"></a>
+        <a href="https://www.youtube.com/watch?v=QsCbZbAqI7o" target="_blank"><img src="thumb3.jpg" alt="Video 3"></a>
+      </div>
+
+      <h2 style="margin-top: 3rem;">Programador en Level 8</h2>
+      <p>Me desempeñé como programador de videojuegos desde febrero de 2025 hasta julio, trabajando en el desarrollo y soporte técnico de sistemas de juego usando Unreal Engine y herramientas personalizadas.</p>
+    </div>
+    <div class="image-preview">
+      <img src="preview-portafolio.png" alt="Imagen Portafolio">
+    </div>
+  </section>
+
+  <section id="contacto">
+  <div class="content" style="margin: 0 auto; text-align: center;">
+    <h1>Contacto</h1>
+    <div class="social-links" style="margin-top: 1.5rem;">
+      <a href="https://twitter.com/" class="button" target="_blank">Twitter</a>
+      <a href="https://instagram.com/" class="button" target="_blank">Instagram</a>
+      <a href="#formulario-correo" class="button">Correo Electrónico</a>
+    </div>
+  </div>
+</section>
+
+<section id="formulario-correo">
+  <div class="content" style="margin: 0 auto; max-width: 500px;">
+    <h2 style="text-align: center;">Enviame un mensaje</h2>
+    <form action="mailto:tucorreo@example.com" method="post" enctype="text/plain" style="display: flex; flex-direction: column; gap: 1rem;">
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" id="email" name="email" placeholder="Tu correo" required>
+      <textarea id="mensaje" name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+      <input type="submit" value="Enviar" class="button" style="align-self: center;">
+    </form>
+  </div>
+</section>
+
+<script>
+  function cambiarImagen(src) {
+    document.getElementById("preview-img").src = src;
+  }
+</script>

@@ -1,0 +1,16 @@
+#quien-soy h2 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #FFB703;
+}
+
+#quien-soy ul {
+  list-style: none;
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+
+#quien-soy li {
+  margin-bottom: 0.5rem;
+  color: #eee;
+}
