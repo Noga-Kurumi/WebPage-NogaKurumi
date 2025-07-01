@@ -1,289 +1,257 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Noga Kurumi | Portafolio</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Noga Kurumi | Portafolio</title>
+  </head>
+  <body>
+    <header class="header_section">
+      <div class="max-width">
+        <a href="#inicio" class="logo">NK</a>
+        <nav>
+          <a class="hover-underline-animation left" href="#inicio">Inicio</a>
+          <a class="hover-underline-animation left" href="#quien-soy">Quién soy</a>
+          <a class="hover-underline-animation left" href="#portafolio">Portafolio</a>
+          <a class="hover-underline-animation left" href="#contacto">Contacto</a>
+          <a class="hover-underline-animation left" href="#formulario">Formulario</a>
+        </nav>
+      </div>
+    </header>
 
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #023047;
-      color: #ffffff;
-    }
-
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5rem 3rem;
-      background-color: #023047;
-      z-index: 1000;
-    }
-
-    .logo {
-      font-weight: bold;
-      font-size: 1.3rem;
-      color: #8ECAE6;
-    }
-
-    nav a {
-      color: #ccc;
-      margin-left: 2rem;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    nav a:hover {
-      color: #8ECAE6;
-    }
-
-    section {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 6rem 3rem 3rem;
-    }
-
-    .content {
-      flex: 1;
-      max-width: 600px;
-    }
-
-    .content h1 {
-      font-size: 2.8rem;
-      color: #ffffff;
-    }
-
-    .content h1 span {
-      color: #8ECAE6;
-    }
-
-    .content p {
-      margin-top: 1rem;
-      font-size: 1.1rem;
-      color: #aaa;
-      line-height: 1.6;
-    }
-
-    .content a.button {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #8ECAE6;
-      color: #000;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background-color 0.2s;
-    }
-
-    .content a.button:hover {
-      background-color: #219EBC;
-    }
-
-    .photo {
-      flex: 1;
-      display: flex;
-      justify-content: right;
-    }
-
-    .photo img {
-      width: 450px;
-      border-radius: 25px;
-      object-fit: cover;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      background-color: #021e33;
-      color: #aaa;
-    }
-
-    #quien-soy {
-      flex-direction: row-reverse;
-    }
-
-    #quien-soy .image-preview {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
-
-    #quien-soy .image-preview img {
-      max-width: 400px;
-      border-radius: 20px;
-      transition: opacity 0.3s ease;
-    }
-
-    #quien-soy .content h2 {
-      margin-top: 2rem;
-      color: #FFB703;
-    }
-
-    #quien-soy ul {
-      list-style: none;
-      padding-left: 1rem;
-      margin-top: 1rem;
-    }
-
-    #quien-soy li {
-      margin-bottom: 0.5rem;
-      color: #eee;
-    }
-
-    .carousel {
-      display: flex;
-      gap: 1rem;
-      overflow-x: auto;
-      padding: 1rem 0;
-      scroll-behavior: smooth;
-    }
-
-    .carousel img {
-      height: 150px;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-
-    .carousel img:hover {
-      transform: scale(1.05);
-    }
-
-    #portafolio {
-      flex-direction: row;
-    }
-
-    #portafolio .image-preview {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    #portafolio .image-preview img {
-      max-width: 400px;
-      border-radius: 20px;
-    }
-
-    #contacto, #formulario-correo {
-      justify-content: center;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <div class="logo">NK</div>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#quien-soy">Quién soy</a>
-      <a href="#portafolio">Portafolio</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
-
-  <section id="inicio">
-    <div class="content">
-      <h1>Soy <span>Noga Kurumi</span></h1>
-      <p>Desarrollador especializado en Unreal Engine y UEFN. Con experiencia en edición de video profesional, integración de IA y automatización de flujos de trabajo. En constante evolución, combinando diseño técnico y creatividad para ofrecer soluciones funcionales y eficientes.</p>
-      <a class="button" href="#contacto">CONTACTAME</a>
-    </div>
-    <div class="photo">
-      <img src="foto.png" alt="Noga Kurumi">
-    </div>
-  </section>
-
-    <section id="quien-soy">
-    <div class="content">
-        <h1>Quién soy</h1>
-        <div class="bio">
-        <h2>Mi nombre es Julian Gustavo Nogales</h2>
-        <p>Aunque en internet se me conoce como Noga Kurumi. Soy desarrollador especializado en Unreal Engine y UEFN, con experiencia sólida en edición de video profesional, integración de inteligencia artificial y automatización de flujos de trabajo. Me enfoco en soluciones técnicas creativas y funcionales, adaptadas a proyectos modernos.</p>
-        </div>
-        <div class="servicios">
-        <h2>Servicios que ofrezco</h2>
-        <ul>
-            <li onmouseover="cambiarImagen('dev.png')">🎮 Desarrollo de videojuegos (Unreal Engine, UEFN)</li>
-            <li onmouseover="cambiarImagen('video.png')">🎬 Edición profesional de video</li>
-            <li onmouseover="cambiarImagen('fx.png')">🧰 Integración de efectos especiales en postproducción</li>
-        </ul>
-        </div>
-        <div class="trabajo">
-        <h2>Cómo trabajar conmigo</h2>
-        <p>Podés contactarme directamente a través del formulario de contacto o redes sociales. Una vez que discutamos tu idea o necesidad, propongo una solución concreta, tiempos y presupuesto. Me comprometo con la calidad y la comunicación constante durante todo el proceso.</p>
-        </div>
-    </div>
-    <div class="image-preview">
-        <img id="preview-img" src="preview-default.png" alt="Vista previa">
-    </div>
+    <section id="inicio" class="max-width">
+      <div class="content">
+        <h1>Soy <span class="hover-underline-animation left">Noga Kurumi</span></h1>
+        <p>
+          Desarrollador especializado en Unreal Engine y UEFN. Con experiencia
+          en edición de video profesional, integración de IA y automatización de
+          flujos de trabajo. En constante evolución, combinando diseño técnico y
+          creatividad para ofrecer soluciones funcionales y eficientes.
+        </p>
+        <a class="button" href="#contacto">CONTACTAME</a>
+      </div>
+      <div class="photo">
+        <img src="foto.png" alt="Noga Kurumi" />
+      </div>
     </section>
 
-  <section id="portafolio">
-    <div class="content">
-      <h1>Portafolio</h1>
-      <h2>Edición de video para creadores</h2>
-      <p>Colaboré como editor con creadores como JasperDev, Tomex y Ale Wang, realizando edición narrativa, motion graphics y optimización para YouTube. Podés ver la versión completa de mi trabajo en edición aquí:</p>
-      <a class="button" href="https://ytjobs.co/talent/profile/187951" target="_blank">VER PORTAFOLIO COMPLETO</a>
-
-      <h2 style="margin-top: 3rem;">Postproducción en Caprichoso</h2>
-      <p>Trabajé en efectos visuales para una variedad de proyectos audiovisuales, desde promos hasta cortos experimentales. Algunos ejemplos:</p>
-      <div class="carousel" id="carrusel">
-        <a href="https://www.youtube.com/watch?v=hjxiq0IZO4Y" target="_blank"><img src="thumb1.jpg" alt="Video 1"></a>
-        <a href="https://www.youtube.com/watch?v=knlljpAzXAA" target="_blank"><img src="thumb2.jpg" alt="Video 2"></a>
-        <a href="https://www.youtube.com/watch?v=QsCbZbAqI7o" target="_blank"><img src="thumb3.jpg" alt="Video 3"></a>
+    <section id="quien-soy">
+      <div class="content">
+        <h1>Quién soy</h1>
+        <div class="bio">
+          <h2>Mi nombre es Julian Gustavo Nogales</h2>
+          <p>
+            Aunque en internet se me conoce como Noga Kurumi. Soy desarrollador
+            especializado en Unreal Engine y UEFN, con experiencia sólida en
+            edición de video profesional, integración de inteligencia artificial
+            y automatización de flujos de trabajo. Me enfoco en soluciones
+            técnicas creativas y funcionales, adaptadas a proyectos modernos.
+          </p>
+        </div>
+        <div class="servicios">
+          <h2>Servicios que ofrezco</h2>
+          <ul>
+            <li onmouseover="cambiarImagen('dev.png')">
+              🎮 Desarrollo de videojuegos (Unreal Engine, UEFN)
+            </li>
+            <li onmouseover="cambiarImagen('video.png')">
+              🎬 Edición profesional de video
+            </li>
+            <li onmouseover="cambiarImagen('fx.png')">
+              🧰 Integración de efectos especiales en postproducción
+            </li>
+          </ul>
+        </div>
+        <div class="trabajo">
+          <h2>Cómo trabajar conmigo</h2>
+          <p>
+            Podés contactarme directamente a través del formulario de contacto o
+            redes sociales. Una vez que discutamos tu idea o necesidad, propongo
+            una solución concreta, tiempos y presupuesto. Me comprometo con la
+            calidad y la comunicación constante durante todo el proceso.
+          </p>
+        </div>
       </div>
+      <div class="image-preview">
+        <img id="preview-img" src="preview-default.png" alt="Vista previa" />
+      </div>
+    </section>
 
-      <h2 style="margin-top: 3rem;">Programador en Level 8</h2>
-      <p>Me desempeñé como programador de videojuegos desde febrero de 2025 hasta julio, trabajando en el desarrollo y soporte técnico de sistemas de juego usando Unreal Engine y herramientas personalizadas.</p>
-    </div>
-    <div class="image-preview">
-      <img src="preview-portafolio.png" alt="Imagen Portafolio">
-    </div>
-  </section>
+    <section id="portafolio">
+      <div class="content">
+        <h1>Portafolio</h1>
+        <h2>Edición de video para creadores</h2>
+        <p>
+          Colaboré como editor con creadores como JasperDev, Tomex y Ale Wang,
+          realizando edición narrativa, motion graphics y optimización para
+          YouTube. Podés ver la versión completa de mi trabajo en edición aquí:
+        </p>
+        <a
+          class="button"
+          href="https://ytjobs.co/talent/profile/187951"
+          target="_blank"
+          >VER PORTAFOLIO COMPLETO</a
+        >
 
-  <section id="contacto">
-  <div class="content" style="margin: 0 auto; text-align: center;">
-    <h1>Contacto</h1>
-    <div class="social-links" style="margin-top: 1.5rem;">
-      <a href="https://twitter.com/" class="button" target="_blank">Twitter</a>
-      <a href="https://instagram.com/" class="button" target="_blank">Instagram</a>
-      <a href="#formulario-correo" class="button">Correo Electrónico</a>
-    </div>
-  </div>
-</section>
+        <h2 style="margin-top: 3rem">Postproducción en Caprichoso</h2>
+        <p>
+          Trabajé en efectos visuales para una variedad de proyectos
+          audiovisuales, desde promos hasta cortos experimentales. Algunos
+          ejemplos:
+        </p>
+        <div class="carousel" id="carrusel">
+          <a href="https://www.youtube.com/watch?v=hjxiq0IZO4Y" target="_blank"
+            ><img src="thumb1.jpg" alt="Video 1"
+          /></a>
+          <a href="https://www.youtube.com/watch?v=knlljpAzXAA" target="_blank"
+            ><img src="thumb2.jpg" alt="Video 2"
+          /></a>
+          <a href="https://www.youtube.com/watch?v=QsCbZbAqI7o" target="_blank"
+            ><img src="thumb3.jpg" alt="Video 3"
+          /></a>
+        </div>
 
-<section id="formulario-correo">
-  <div class="content" style="margin: 0 auto; max-width: 500px;">
-    <h2 style="text-align: center;">Enviame un mensaje</h2>
-    <form action="mailto:tucorreo@example.com" method="post" enctype="text/plain" style="display: flex; flex-direction: column; gap: 1rem;">
-      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
-      <input type="email" id="email" name="email" placeholder="Tu correo" required>
-      <textarea id="mensaje" name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
-      <input type="submit" value="Enviar" class="button" style="align-self: center;">
-    </form>
-  </div>
-</section>
+        <h2 style="margin-top: 3rem">Programador en Level 8</h2>
+        <p>
+          Me desempeñé como programador de videojuegos desde febrero de 2025
+          hasta julio, trabajando en el desarrollo y soporte técnico de sistemas
+          de juego usando Unreal Engine y herramientas personalizadas.
+        </p>
+      </div>
+      <div class="image-preview">
+        <img src="computer.png" alt="Imagen Portafolio" />
+      </div>
+    </section>
+    <
+    <section id="contacto">
+      <div class="content" style="margin: 0 auto; text-align: center">
+        <h1>Contacto</h1>
+        <ul class="example-2">
 
-<script>
-  function cambiarImagen(src) {
-    document.getElementById("preview-img").src = src;
-  }
-</script>
+
+          <li class="icon-content">
+            <a
+              href=""
+              aria-label="Twitter"
+              data-social="Twitter"
+            >
+              <div class="filled"></div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+                stroke-width="0"
+                fill="currentColor"
+                stroke="currentColor"
+              >
+                <path
+                  d="M8 2H1L9.26086 13.0145L1.44995 21.9999H4.09998L10.4883 14.651L16 22H23L14.3917 10.5223L21.8001 2H19.1501L13.1643 8.88578L8 2ZM17 20L5 4H7L19 20H17Z"
+                ></path>
+              </svg>
+            </a>
+            <div class="tooltip">Twitter</div>
+          </li>
+
+
+
+          <li class="icon-content">
+            <a href="" aria-label="Gmail" data-social="Gmail">
+              <div class="filled"></div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="100"
+                height="100"
+                fill="currentColor"
+                stroke="currentColor"
+                viewBox="0 0 50 50"
+              >
+                <path
+                  d="M 5.5 7 C 3.03125 7 1.011719 9.015625 1 11.484375 C 1 11.484375 1 11.488281 1 11.492188 C 1 11.496094 1 11.496094 1 11.5 L 1 38.5 C 1 40.972656 3.027344 43 5.5 43 L 44.5 43 C 46.972656 43 49 40.972656 49 38.5 L 49 11.5 C 49 11.496094 49 11.496094 49 11.492188 C 49 11.488281 49 11.484375 49 11.484375 C 48.988281 9.015625 46.96875 7 44.5 7 Z M 8.101563 9 L 41.902344 9 L 25 20.78125 Z M 4.773438 9.117188 L 25 23.21875 L 45.230469 9.117188 C 46.253906 9.425781 46.992188 10.355469 47 11.488281 C 46.996094 11.699219 46.78125 12.121094 46.46875 12.460938 C 46.152344 12.804688 45.84375 13.019531 45.84375 13.019531 L 45.839844 13.027344 L 25 27.777344 L 4.160156 13.027344 L 4.15625 13.019531 C 4.15625 13.019531 3.847656 12.804688 3.53125 12.460938 C 3.21875 12.121094 3.003906 11.699219 3 11.488281 C 3.007813 10.355469 3.746094 9.425781 4.773438 9.117188 Z M 3 14.652344 C 3 14.652344 3.007813 14.660156 3.007813 14.660156 L 3.015625 14.664063 L 3.015625 14.667969 L 6 16.777344 L 6 41 L 5.5 41 C 4.109375 41 3 39.890625 3 38.5 Z M 47 14.652344 L 47 38.5 C 47 39.890625 45.890625 41 44.5 41 L 44 41 L 44 16.777344 L 46.984375 14.667969 L 46.984375 14.664063 C 46.984375 14.664063 47 14.652344 47 14.652344 Z M 8 18.191406 L 25 30.222656 L 42 18.191406 L 42 41 L 8 41 Z"
+                ></path>
+              </svg>
+            </a>
+            <div class="tooltip">Gmail</div>
+          </li>
+
+
+
+
+
+          <li class="icon-content">
+            <a
+              href="https://www.instagram.com/"
+              aria-label="Instagram"
+              data-social="instagram"
+            >
+              <div class="filled"></div>
+              <svg
+                xml:space="preserve"
+                viewBox="0 0 16 16"
+                class="bi bi-instagram"
+                fill="currentColor"
+                height="16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="currentColor"
+                  d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                ></path>
+              </svg>
+            </a>
+            <div class="tooltip">Instagram</div>
+          </li>
+
+
+
+          
+        </ul>
+      </div>
+    </section>
+    <section class="section_form" id="formulario">
+      <div class="content">
+        <h2 style="text-align: center">Enviame un mensaje</h2>
+        <form
+          action="mailto:tucorreo@example.com"
+          method="post"
+          enctype="text/plain"
+          style="display: flex; flex-direction: column; gap: 1rem"
+        >
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Tu nombre"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Tu correo"
+            required
+          />
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            rows="5"
+            placeholder="Tu mensaje"
+            required
+          ></textarea>
+          <button type="submit" class="button" style="align-self: center">
+            Enviar
+          </button>
+        </form>
+      </div>
+    </section>
+  </body>
+
+  <script>
+    function cambiarImagen(src) {
+      document.getElementById("preview-img").src = src;
+    }
+  </script>
+</html>
