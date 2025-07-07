@@ -292,6 +292,7 @@ footer {
   border-radius: 18px;
   box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.18);
   gap: 1.2rem;
+  width: 100%;
   max-width: 900px;
   margin: 2rem auto;
 }
@@ -359,6 +360,7 @@ ul {
   justify-content: space-between;
   align-items: center;
   height: 30rem;
+  max-width: 500px;
 }
 .example-2 .icon-content {
   margin: 0 10px;
@@ -455,6 +457,13 @@ ul {
   
 }
 @media screen and (width < 900px) {
+  .photo img {
+    width: 244px;
+  }
+  .div_contactame{
+    display: flex;
+    justify-content: center;
+  }
   #contacto{
     flex-flow: column;
   }
@@ -509,10 +518,11 @@ ul {
   }
 section{
   padding: 2rem 3rem 3rem;
-  min-height: 80dvh;
+  min-height: 100dvh;
 }
 .example-2 {
   height: 15rem;
+  
 }
 .carousel img {
   height: 20rem;
