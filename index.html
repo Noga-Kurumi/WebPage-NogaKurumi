@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/svg+xml" href="/NK-logo.ico">
     <title>Noga Kurumi | Portafolio</title>
   </head>
   <body>
@@ -11,17 +12,27 @@
         <a href="#inicio" class="logo">NK</a>
         <nav>
           <a class="hover-underline-animation left" href="#inicio">Inicio</a>
-          <a class="hover-underline-animation left" href="#quien-soy">Quién soy</a>
-          <a class="hover-underline-animation left" href="#portafolio">Portafolio</a>
-          <a class="hover-underline-animation left" href="#contacto">Contacto</a>
-          <a class="hover-underline-animation left" href="#formulario">Formulario</a>
+          <a class="hover-underline-animation left" href="#quien-soy"
+          >Quién soy</a
+          >
+          <a class="hover-underline-animation left" href="#portafolio"
+          >Portafolio</a
+          >
+          <a class="hover-underline-animation left" href="#contacto"
+          >Contacto</a
+          >
+          <a class="hover-underline-animation left" href="#formulario"
+          >Formulario</a
+          >
         </nav>
       </div>
     </header>
-
-    <section id="inicio" class="max-width">
+    
+    <section id="inicio" class="max-width header_info">
       <div class="content">
-        <h1>Soy <span class="hover-underline-animation left">Noga Kurumi</span></h1>
+        <h1>
+          Soy <span class="hover-underline-animation left">Noga Kurumi</span>
+        </h1>
         <p>
           Desarrollador especializado en Unreal Engine y UEFN. Con experiencia
           en edición de video profesional, integración de IA y automatización de
@@ -35,15 +46,16 @@
       </div>
     </section>
 
-    <section id="quien-soy">
+    <section class="max-width" id="quien-soy">
+      <article class="article_quien-soy">
       <div class="content">
-        <h1>Quién soy</h1>
-        <div class="bio">
-          <h2>Mi nombre es Julian Gustavo Nogales</h2>
-          <p>
-            Aunque en internet se me conoce como Noga Kurumi. Soy desarrollador
-            especializado en Unreal Engine y UEFN, con experiencia sólida en
-            edición de video profesional, integración de inteligencia artificial
+        <h2 class="h2_quiensoy">Quién soy</h2>
+          <div class="bio">
+            <h3>Mi nombre es <i>Julian Gustavo Nogales</i></h3>
+            <p>
+              Aunque en internet se me conoce como Noga Kurumi. Soy desarrollador
+              especializado en Unreal Engine y UEFN, con experiencia sólida en
+              edición de video profesional, integración de inteligencia artificial
             y automatización de flujos de trabajo. Me enfoco en soluciones
             técnicas creativas y funcionales, adaptadas a proyectos modernos.
           </p>
@@ -72,13 +84,14 @@
           </p>
         </div>
       </div>
+    </article>
       <div class="image-preview">
         <img id="preview-img" src="preview-default.png" alt="Vista previa" />
       </div>
     </section>
 
-    <section id="portafolio">
-      <div class="content">
+    <section class="max-width" id="portafolio">
+      <div class="content div_dataportfolio">
         <h1>Portafolio</h1>
         <h2>Edición de video para creadores</h2>
         <p>
@@ -119,22 +132,16 @@
         </p>
       </div>
       <div class="image-preview">
-        <img src="computer.png" alt="Imagen Portafolio" />
+        <img src="game_dev_design.webp" alt="Imagen Portafolio" />
       </div>
     </section>
-    <
+    
     <section id="contacto">
       <div class="content" style="margin: 0 auto; text-align: center">
         <h1>Contacto</h1>
         <ul class="example-2">
-
-
           <li class="icon-content">
-            <a
-              href=""
-              aria-label="Twitter"
-              data-social="Twitter"
-            >
+            <a href="" aria-label="Twitter" data-social="Twitter">
               <div class="filled"></div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -152,8 +159,6 @@
             </a>
             <div class="tooltip">Twitter</div>
           </li>
-
-
 
           <li class="icon-content">
             <a href="" aria-label="Gmail" data-social="Gmail">
@@ -175,10 +180,6 @@
             </a>
             <div class="tooltip">Gmail</div>
           </li>
-
-
-
-
 
           <li class="icon-content">
             <a
@@ -204,48 +205,44 @@
             </a>
             <div class="tooltip">Instagram</div>
           </li>
-
-
-
-          
         </ul>
       </div>
-    </section>
-    <section class="section_form" id="formulario">
-      <div class="content">
-        <h2 style="text-align: center">Enviame un mensaje</h2>
-        <form
-          action="mailto:tucorreo@example.com"
-          method="post"
-          enctype="text/plain"
-          style="display: flex; flex-direction: column; gap: 1rem"
-        >
-          <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            placeholder="Tu nombre"
-            required
-          />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Tu correo"
-            required
-          />
-          <textarea
-            id="mensaje"
-            name="mensaje"
-            rows="5"
-            placeholder="Tu mensaje"
-            required
-          ></textarea>
-          <button type="submit" class="button" style="align-self: center">
-            Enviar
-          </button>
-        </form>
-      </div>
+      <article class="article_form" id="formulario">
+        <div class="content">
+          <h2 style="text-align: center">Enviame un mensaje</h2>
+          <form
+            action="mailto:tucorreo@example.com"
+            method="post"
+            enctype="text/plain"
+            style="display: flex; flex-direction: column; gap: 1rem"
+          >
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Tu nombre"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Tu correo"
+              required
+            />
+            <textarea
+              id="mensaje"
+              name="mensaje"
+              rows="5"
+              placeholder="Tu mensaje"
+              required
+            ></textarea>
+            <button type="submit" class="button" style="align-self: center">
+              Enviar
+            </button>
+          </form>
+        </div>
+      </article>
     </section>
   </body>
 
