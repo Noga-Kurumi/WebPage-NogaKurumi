@@ -1,3 +1,7 @@
+:root {
+  --bg-color: #023047;
+  --bg-color-second: #065075;
+}
 #quien-soy h2 {
   margin-top: 2rem;
   font-size: 1.5rem;
@@ -30,16 +34,16 @@ html {
 
 body {
   font-family: "Segoe UI", sans-serif;
-  background-color: #023047;
+  background-color: var(--bg-color);
   color: #ffffff;
 }
 
-.header_section {
+.header_section_desktop {
   position: fixed;
   top: 0;
   width: 100%;
   padding: 1.5rem 3rem;
-  background-color: #065075;
+  background-color: var(--bg-color-second);
   z-index: 1000;
   div {
     display: flex;
@@ -80,7 +84,7 @@ body {
 }
 
 .hover-underline-animation::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -128,17 +132,17 @@ section {
 .content {
   flex: 1;
   max-width: 600px;
-  background: #023047;
+  background: var(--bg-color);
 }
 
 .content h1 {
   font-size: 4.5rem;
   color: #ffffff;
 }
-.article_quien-soy{
+.article_quien-soy {
   margin: 2rem;
 }
-.h2_quiensoy{
+.h2_quiensoy {
   font-size: 4rem;
 }
 .content h1 span {
@@ -162,12 +166,10 @@ section {
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  
 }
 
 .content a.button:hover {
   background-color: #219ebc;
-  
 }
 
 .photo {
@@ -207,13 +209,12 @@ footer {
 }
 
 #quien-soy i {
-  color: #ffffff ;
+  color: #ffffff;
   font-size: 1.5rem;
   text-decoration: underline;
 }
-#quien-soy h3{
+#quien-soy h3 {
   font-size: 1.5rem;
-
 }
 #quien-soy img {
   height: auto;
@@ -269,7 +270,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.div_dataportfolio{
+.div_dataportfolio {
   padding: 1rem;
 }
 #portafolio .image-preview img {
@@ -287,7 +288,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #022b43;
+  background: var(--bg-color);
   padding: 2rem 2.5rem;
   border-radius: 18px;
   box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.18);
@@ -324,25 +325,20 @@ footer {
 }
 
 .article_form button {
-  background:  #5e8ea5;
+  background: #5e8ea5;
   color: #023047;
   font-weight: bold;
   border: none;
   border-radius: 8px;
-  padding:1rem;
+  padding: 1rem;
   font-size: 1rem;
   width: 100%;
   cursor: pointer;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
   margin-top: 0.5rem;
-  &:hover{
-    background:  #a2d0e6;
-
+  &:hover {
+    background: #a2d0e6;
   }
-  
-
-    
-
 }
 
 .article_form input[type="submit"].button:hover {
@@ -445,89 +441,116 @@ ul {
     #fd1f1f
   );
 }
+/* estilos imagenes animacion scroll */
+
+.animation_scroll {
+  view-timeline-name: --image;
+  animation-timeline: --image;
+  animation-name: animation_scroll;
+  animation-fill-mode: both;
+  animation-range: entry 23% cover 50%;
+}
+
+@keyframes animation_scroll {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
 @media screen and (width < 1500px) {
   .photo img {
     width: 350px;
   }
-  .content h1{
+  .content h1 {
     font-size: 3.5rem;
   }
 }
 @media screen and (width < 1200px) {
-  
 }
 @media screen and (width < 900px) {
+  .header_section_desktop {
+    display: none;
+  }
   .photo img {
     width: 244px;
   }
-  .div_contactame{
+  .div_contactame {
     display: flex;
     justify-content: center;
   }
-  #contacto{
+  #contacto {
     flex-flow: column;
   }
-  #contacto{
+  #contacto {
     margin: 15rem 0;
   }
-  #portafolio{
+  #portafolio {
     flex-flow: column;
   }
-  .content p{
+  .content p {
     /* text-align: center; */
   }
-  .content h1{
-    font-size:8.5vw;
-    
+  .content h1 {
+    font-size: 8.5vw;
   }
-  section{
+  section {
     display: flex;
     flex-flow: column;
   }
-  .logo{
+  .logo {
     font-size: 2rem;
   }
-  .header_section {
-    bottom: 0;
-    padding: 1rem 2rem;
-    position: fixed;
-    top: 51rem;
-    div{
+  .header_section_mobile {
+    div {
+      bottom: 0;
+      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      height: 8rem;
+      background-color: var(--bg-color-second);
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-flow: column;
+      z-index: 999;
+      a {
+        padding: 5px 0;
+      }
     }
   }
-  nav{
+  nav {
     display: flex;
     justify-content: space-evenly;
   }
-  nav a{
+  nav a {
     font-size: 1rem;
   }
-  #quien-soy  {
+  #quien-soy {
     display: flex;
     flex-flow: column;
-    
-    #preview-img{
+
+    #preview-img {
       height: auto;
       width: 100%;
       padding: 2rem;
     }
   }
-section{
-  padding: 2rem 3rem 3rem;
-  min-height: 100dvh;
-}
-.example-2 {
-  height: 15rem;
-  
-}
-.carousel img {
-  height: 20rem;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
+  section {
+    padding: 2rem 3rem 3rem;
+    min-height: 100dvh;
+  }
+  .example-2 {
+    height: 15rem;
+  }
+  .carousel img {
+    height: 20rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
 }
