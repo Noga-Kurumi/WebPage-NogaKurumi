@@ -123,15 +123,16 @@ nav a:hover {
 }
 
 section {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   display: flex;
   align-items: center;
-  padding: 10rem 3rem 3rem;
+  padding: 13rem 3rem;
 }
-
+#contacto{
+  /* max-width: 1600px; */
+}
 .content {
   flex: 1;
-  max-width: 600px;
   background: var(--bg-color);
 }
 
@@ -243,6 +244,7 @@ footer {
   display: flex;
   gap: 1rem;
   overflow-x: auto;
+  max-width: 600px;
   padding: 1rem;
   scroll-behavior: smooth;
 }
@@ -261,7 +263,6 @@ footer {
 #portafolio {
   flex-direction: row;
   gap: 8rem;
-  padding: 1rem;
 }
 
 #portafolio .image-preview {
@@ -270,8 +271,8 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.div_dataportfolio {
-  padding: 1rem;
+.div_dataportfolio{
+  /* padding: 2rem; */
 }
 #portafolio .image-preview img {
   height: auto;
@@ -283,6 +284,8 @@ footer {
   margin: auto;
   display: flex;
   justify-content: center;
+  width: 100%;
+  max-width: 800px;
 }
 .article_form form {
   display: flex;
@@ -485,15 +488,15 @@ ul {
   }
   #contacto {
     flex-flow: column;
-  }
-  #contacto {
     margin: 15rem 0;
   }
   #portafolio {
+    /* padding: 1rem; */
     flex-flow: column;
   }
   .content p {
     /* text-align: center; */
+    padding: 1rem;
   }
   .content h1 {
     font-size: 8.5vw;
@@ -516,6 +519,7 @@ ul {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
       flex-flow: column;
       z-index: 999;
       a {
@@ -526,6 +530,8 @@ ul {
   nav {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 5px;
   }
   nav a {
     font-size: 1rem;
@@ -541,11 +547,14 @@ ul {
     }
   }
   section {
-    padding: 2rem 3rem 3rem;
-    min-height: 100dvh;
+    padding: 4rem 3rem 7rem 3rem;
   }
   .example-2 {
     height: 15rem;
+  }
+  .carousel{
+    width: 100%;
+    max-width: 500px;
   }
   .carousel img {
     height: 20rem;
