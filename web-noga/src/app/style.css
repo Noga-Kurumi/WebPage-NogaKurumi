@@ -191,10 +191,13 @@ section {
 
 footer {
   text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
+  padding: 2rem 0;
+  font-size: 1.1rem;
   background-color: #021e33;
   color: #aaa;
+  letter-spacing: 0.5px;
+  border-top: 1px solid #065075;
+  margin-top: 2rem;
 }
 
 #quien-soy {
@@ -244,9 +247,13 @@ footer {
   display: flex;
   gap: 1rem;
   overflow-x: auto;
-  max-width: 600px;
   padding: 1rem;
   scroll-behavior: smooth;
+  max-width: 1500px;
+  @media (width < 648px) {
+    max-width: 600px;
+    
+  }
 }
 
 .carousel img {
@@ -259,7 +266,17 @@ footer {
 .carousel img:hover {
   transform: scale(1.05);
 }
-
+.article_data_projects{
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+  @media (width < 900px) {
+    flex-flow: column;
+  }
+  div{
+   max-width: 439px; 
+  }
+}
 #portafolio {
   flex-direction: row;
   gap: 8rem;
@@ -488,7 +505,6 @@ ul {
   }
   #contacto {
     flex-flow: column;
-    margin: 15rem 0;
   }
   #portafolio {
     /* padding: 1rem; */
@@ -561,5 +577,18 @@ ul {
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s;
+  }
+}
+footer{
+  min-height: 20vh;
+  display: flex; 
+  align-items: center;
+  @media (width < 640px) {
+    align-items: start;
+  }
+  justify-content: center;
+  a{
+    color: #fff;
+    padding-left: 1rem;
   }
 }
