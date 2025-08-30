@@ -1,0 +1,23 @@
+name: Deploy static site
+on:
+  push:
+    branches: [ "main" ]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Opcional: si generás archivos (build), hacelo aquí.
+      # - run: npm ci && npm run build
+
+      - name: Rsync to server
+        uses: burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -avz --delete
+          path: ./         # si tenés carpeta de build, cambiala, ej: ./dist/
+          remote_path: ${{ secrets.TARGET }}
+          remote_host: ${{ secrets.SSH_HOST }}
+          remote_user: ${{ secrets.SSH_USER }}
+          remote_key: ${{ secrets.SSH_KEY }}
+          remote_port: ${{ secrets.SSH_PORT }}
