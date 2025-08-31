@@ -16,8 +16,14 @@ jobs:
         env:
           SSH_KEY_B64: ${{ secrets.SSH_KEY_B64 }}
 
+      - name: SSH smoke test
+        run: |
+          ssh -i key.pem -p ${{ secrets.SSH_PORT }} -o StrictHostKeyChecking=no -vvv \
+            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} 'echo OK'
+
       - name: Rsync to server
         run: |
-          rsync -avz --delete \
-            -e "ssh -i key.pem -p ${{ secrets.SSH_PORT }} -o StrictHostKeyChecking=no" \
+          rsync -avz --delete --progress \
+            -e "ssh -i key.pem -p ${{ secrets.SSH_PORT }} -o StrictHostKeyChecking=no -o ServerAliveInterval=30 -o ConnectTimeout=15 -vvv" \
             ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.TARGET }}
+            
