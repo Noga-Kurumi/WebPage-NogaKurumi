@@ -552,23 +552,17 @@ ul {
   }
 }
 .animation_scroll-nav {
-  view-timeline-name: --color;
-  animation-timeline: --color;
-  animation-name: animation_scroll-nav;
-  animation-fill-mode: both;
-  animation-range: entry 23% cover 50%;
+  animation: anim_scroll_nav linear both;
+  animation-timeline: scroll(root);
+  animation-range: 0 200rem;
 }
 
-@keyframes animation_scroll-nav {
+@keyframes anim_scroll_nav {
   from {
-    /* opacity: 0; */
-    /* backdrop-filter: blur(0px); */
-    background-color: rgb(30, 165, 233);
+    backdrop-filter: blur(50px);
   }
   to {
-    /* opacity: 1; */
-    /* backdrop-filter: blur(10px); */
-    background-color: rgb(6, 80, 117);
+    background-color: #0c6c9ce5;
   }
 }
 
