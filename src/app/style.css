@@ -560,9 +560,11 @@ ul {
 @keyframes anim_scroll_nav {
   from {
     backdrop-filter: blur(50px);
+    border-bottom: #fff solid 5px;
   }
   to {
-    background-color: #0c6c9ce5;
+    border-bottom: #0a5378e5 solid 5px;
+    background-color: #0a5378e5;
   }
 }
 
