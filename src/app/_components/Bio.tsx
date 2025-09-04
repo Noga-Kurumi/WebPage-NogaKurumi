@@ -1,3 +1,4 @@
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import React from "react";
 
 export const Bio = () => {
@@ -43,17 +44,34 @@ export const Bio = () => {
             </div>
             <div className="servicios">
               <h2>Servicios que ofrezco</h2>
-              <ul className="grid grid-cols-[repeat(auto-fit,minmax(20rem,1fr))] gap-[1rem] ">
+              {/* <ul className="grid grid-cols-[repeat(auto-fit,minmax(20rem,1fr))] gap-[1rem] ">
                 {
                   data_offer.map(e => (
                     <li className="flex flex-col" key={e.id}>
                       <img className="h-auto w-[5rem]" src={e.img} alt={e.data} />
-                      <p>{e.data}</p>
+                      <b className="font-bold text-[#fff] text-[1.5rem] ">{e.data}</b>
                     </li>
                   ))
                 }
 
-              </ul>
+              </ul> */}
+              <div className="flex justify-center animation_scroll" id="carrusel">
+                <Carousel className="max-w-[700px] mx-auto ">
+                  <CarouselContent>
+                    {data_offer.map((e) => (
+                      // height={315} width={560}
+                      <CarouselItem key={e.id} className="relative">
+                        <div className="  h-auto w-full
+                          bg-[#00000060]  inset-0 absolute"></div>
+                        <b className="absolute  bottom-[4rem] right-[1rem] left-[1rem] font-bold text-[#fff] text-[1.5rem] text-center z-50">{e.data}</b>
+                        <img className="h-auto w-full" src={e.img} alt={e.data} />
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="cursor-pointer" />
+                  <CarouselNext className="cursor-pointer" />
+                </Carousel>
+              </div>
             </div>
             <div className="trabajo">
               <h2>Cómo trabajar conmigo</h2>
