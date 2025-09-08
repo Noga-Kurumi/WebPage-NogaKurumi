@@ -71,9 +71,7 @@ export const PortfolioCarousel = () => {
       <section className="max-width" id="portafolio">
         <div className="content div_dataportfolio">
           <h1>Portafolio</h1>
-          <a className="button " href={"https://ytjobs.co/talent/profile/187951"} target="_blank">
-            VER PORTAFOLIO COMPLETO
-          </a>
+        <div className="flex flex-col  items-center">
 
           <div className="flex justify-center animation_scroll" id="carrusel">
 
@@ -91,6 +89,10 @@ export const PortfolioCarousel = () => {
               <CarouselNext className="cursor-pointer" />
             </Carousel>
           </div>
+          <a className="button max-w-[300px]  " href={"https://ytjobs.co/talent/profile/187951"} target="_blank">
+            VER PORTAFOLIO COMPLETO
+          </a>
+        </div>
           <article className="article_data_projects">
             {articleData.map((item) => (
               <div key={item.id}>

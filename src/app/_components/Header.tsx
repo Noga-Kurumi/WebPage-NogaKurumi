@@ -54,7 +54,7 @@ export const Header = () => {
     <div className="bg-gradient-shadow ">
       <header className="header_section_desktop animation_scroll-nav">
         <div className="max-width">
-          <a href="#inicio" className="logo">
+          <a href="#inicio" className={`${activeSection === "inicio" ? "logo-focus" : "logo"}`}>
             NK
           </a>
           <nav>
@@ -96,7 +96,7 @@ export const Header = () => {
       <section id="inicio" className="max-width header_info">
         <div className="content">
           <h1>
-            Soy{" "}
+            Soy
             <span className=" ping_effect">Noga Kurumi</span>
           </h1>
           <p>

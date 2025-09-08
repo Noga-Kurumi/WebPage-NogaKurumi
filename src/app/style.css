@@ -80,7 +80,22 @@ body {
 .logo {
   font-weight: bold;
   font-size: 3rem;
-  color: #8ecae6;
+  color: #72a1b6;
+  transition: all 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+  &:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+  }
+}
+.logo-focus {
+  font-weight: bold;
+  font-size: 4rem;
+  color: #bee4f6;
   transition: all 0.2s;
   cursor: pointer;
   text-decoration: none;
@@ -344,7 +359,11 @@ footer {
     flex-flow: column;
   }
   div{
-   max-width: 439px; 
+    max-width: 439px; 
+    @media (width < 900px) {
+      max-width: none; 
+      
+    }
   }
 }
 #portafolio {
@@ -560,11 +579,12 @@ ul {
 @keyframes anim_scroll_nav {
   from {
     backdrop-filter: blur(50px);
-    border-bottom: #fff solid 5px;
+    border-bottom: #ffffff00 solid 5px;
   }
   to {
     border-bottom: #0a5378e5 solid 5px;
     background-color: #0a5378e5;
+    border-bottom: #ffffff solid 5px;
   }
 }
 
@@ -601,7 +621,7 @@ ul {
     padding: 1rem;
   }
   .content h1 {
-    font-size: 8.5vw;
+    font-size: 3rem ;
   }
   section {
     display: flex;
@@ -664,6 +684,7 @@ ul {
     cursor: pointer;
     transition: transform 0.3s;
   }
+ 
 }
 footer{
   min-height: 20vh;

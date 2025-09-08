@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Noga Kurumi | Portafolio",
   description: "Hola soy Noga Kurumi, Desarrolador de videojuegos y Editor de videos profesional",
   icons: {
-    icon: "./NK-logo.ico"
+    icon: "/NK-logo.ico"
   }
 };
 
