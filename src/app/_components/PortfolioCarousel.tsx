@@ -96,15 +96,13 @@ export const PortfolioCarousel = () => {
           <article className="article_data_projects">
             {articleData.map((item) => (
               <div key={item.id}>
-                <h2 style={{ marginTop: "3rem" }}>{item.title}</h2>
+                <b className="m-[1rem] text-[1.5rem] font-bold">{item.title}</b>
                 <p>{item.description}</p>
               </div>
             ))}
           </article>
         </div>
-        {/* <div className="image-preview">
-    <img className="animation_scroll" src="game_dev_design.webp" alt="Imagen Portafolio" />
-  </div> */}
+        
       </section>
     </div>
   );

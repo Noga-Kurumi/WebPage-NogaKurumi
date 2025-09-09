@@ -1,0 +1,114 @@
+@media screen and (width < 1800px) {
+  .photo img {
+    width: 350px;
+  }
+  .content h1, .content span {
+    font-size: 3.2rem;
+  }
+  .max-width {
+    max-width: 1600px;
+    margin: auto;
+  }
+  .content p {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (width < 1200px) {
+  .max-width {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+@media screen and (width < 900px) {
+  .header_section_desktop {
+    display: none;
+  }
+  .photo img {
+    width: 244px;
+  }
+  .div_contactame {
+    display: flex;
+    justify-content: center;
+  }
+  #contacto {
+    flex-flow: column;
+  }
+  #portafolio {
+    /* padding: 1rem; */
+    flex-flow: column;
+  }
+
+  .content p {
+    /* text-align: center; */
+    padding: 1rem;
+  }
+  .content h1,
+  .content span {
+    font-size: 2.5rem;
+  }
+  .content h1{
+    text-align: center;
+  }
+  section {
+    display: flex;
+    flex-flow: column;
+  }
+  .logo {
+    font-size: 2rem;
+  }
+  .header_section_mobile {
+    display: block;
+    div {
+      bottom: 0;
+      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      height: 8rem;
+      background-color: #065075;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-flow: column;
+      z-index: 999;
+      a {
+        padding: 5px 0;
+      }
+    }
+  }
+  nav {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  nav a {
+    font-size: 1rem;
+  }
+  #quien-soy {
+    display: flex;
+    flex-flow: column;
+
+    #preview-img {
+      height: auto;
+      width: 100%;
+      padding: 2rem;
+    }
+  }
+  section {
+    padding: 4rem 3rem 7rem 3rem;
+  }
+  .example-2 {
+    height: 15rem;
+  }
+  .carousel {
+    width: 100%;
+    max-width: 500px;
+  }
+  .carousel img {
+    height: 20rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+}
